@@ -18,6 +18,7 @@ def format_spread(value):
     except (ValueError, TypeError):
         return value
 
+
 @register.filter
 def format_pick_correct(value):
     """
@@ -32,3 +33,20 @@ def format_pick_correct(value):
     except (ValueError, TypeError):
         return value
 
+
+@register.filter
+def format_pick(value):
+    """
+    Custom template filter to format the pick value.
+
+    If the pick is correct, return the team abbreviation in green.
+    If the pick is incorrect, return the team abbreviation in red.
+    """
+
+    try:
+        team, correct = value
+        if correct:
+            return f'<span class="text-success">{team}</span>'
+        return f'<span class="text-danger">{team}</span>'
+    except (ValueError, TypeError):
+        return value

@@ -145,7 +145,7 @@ def league(request, league_id):
 
         picks_list = [None] * current_week
         for pick in player_picks:
-            picks_list[pick.week - 1] = pick.team_picked
+            picks_list[pick.week - 1] = (pick.team_picked, pick.correct)
 
         league_results[player.player.username] = picks_list
 

@@ -132,11 +132,11 @@
             </tr>
         </thead>
 	<tbody>
-            {% for player in league_players %}
+            {% for player, picks in league_results.items %}
                 <tr>
-                        <td></td>
-                    {% for week in weeks %}
-		        <td></td>
+                    <td>{{ player }}</td>
+                    {% for pick in picks %}
+		                <td>{{ pick|format_pick }}</td>
                     {% endfor %}
                 </tr>
             {% endfor %}
