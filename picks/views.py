@@ -140,20 +140,34 @@ def league(request, league_id):
     current_date_eastern = current_time_eastern.date()
     current_pick = Pick.objects.filter(
         leagueplayer__player=request.user.player, leagueplayer__league=league, week=current_week).first()
+    player_past_picks = Pick.objects.filter(leagueplayer__player=request.user.player, leagueplayer__league=league).exclude(week=current_week)
+    player_past_picks_team_list = [pick.team_picked for pick in player_past_picks]
+
+    # Need data formatted like this:
+    '''
+    league_results = {
+        'Player1': ['City1 Team1', 'City2 Team2', ...],
+        'Player2': ['City1 Team1', None, ...],
+        ...
+    }
+    '''
 
     logger.info(f'The current time in EST being used: {current_time_eastern}')
 
-    logger.info(f'The user has made the following pick: {current_pick}')
+    logger.info(f'The user has already made the following pick this week: {current_pick}')
 
     context = {
         'league': league,
         'players': players,
         'league_players': league_players,
         'current_week': current_week,
+        'weeks': [x for x in range(1,19)],
         'current_week_matchups': current_week_matchups,
         'current_time_eastern': current_time_eastern,
         'current_date_eastern': current_date_eastern,
         'current_pick': current_pick,
+        'player_past_picks': player_past_picks,
+        'player_past_picks_team_list': player_past_picks_team_list,
     }
     return render(request, 'picks/league.html', context)
 

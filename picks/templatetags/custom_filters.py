@@ -1,17 +1,7 @@
 from django import template
 
+
 register = template.Library()
-
-
-@register.filter
-def get_pick_for_week(picks, week):
-    """
-    Custom template filter to get the pick for a specific week.
-    """
-    try:
-        return picks.get(week=week).team
-    except picks.model.DoesNotExist:
-        return 'No Pick'
 
 
 @register.filter
@@ -27,3 +17,18 @@ def format_spread(value):
         return str(value)
     except (ValueError, TypeError):
         return value
+
+@register.filter
+def format_pick_correct(value):
+    """
+    Custom template filter to return an emoji for correct or incorrect picks.
+    """
+    try:
+        value = bool(value)
+        if value == True:
+            return "✅"
+        else:
+            return "❌"
+    except (ValueError, TypeError):
+        return value
+

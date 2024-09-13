@@ -4514,3 +4514,1165 @@ WARNING 2024-09-12 20:06:49,906 log Not Found: /
 WARNING 2024-09-12 20:08:11,922 log Not Found: /webui/
 WARNING 2024-09-12 20:09:30,046 log Not Found: /geoserver/web/
 WARNING 2024-09-12 20:33:13,105 log Not Found: /
+WARNING 2024-09-12 20:35:45,994 log Not Found: /
+WARNING 2024-09-12 20:42:43,570 log Not Found: /.env
+WARNING 2024-09-12 20:42:43,751 log Not Found: /
+INFO 2024-09-12 20:51:14,420 views User briantest is in leagues []
+INFO 2024-09-12 20:51:22,860 views User briantest is in leagues []
+INFO 2024-09-12 20:51:30,939 views User briantest is in leagues []
+INFO 2024-09-12 20:51:35,362 views User briantest is in leagues []
+INFO 2024-09-12 20:51:39,260 views User briantest is in leagues []
+INFO 2024-09-12 20:51:48,467 views User briantest is in leagues []
+INFO 2024-09-12 20:51:52,569 views User briantest is in leagues []
+INFO 2024-09-12 20:52:22,107 views User briantest is in leagues []
+WARNING 2024-09-12 20:53:45,609 log Not Found: /
+INFO 2024-09-12 20:54:27,202 views User rizzo is in leagues []
+INFO 2024-09-12 20:54:29,968 views User rizzo is in leagues []
+INFO 2024-09-12 20:54:30,221 views The current time in EST being used: 2024-09-12 21:54:30.212125-04:00
+INFO 2024-09-12 20:54:30,222 views The user has made the following pick: None
+WARNING 2024-09-12 20:55:27,225 log Not Found: /cgi-bin/luci/;stok=/locale
+WARNING 2024-09-12 20:57:33,871 log Not Found: /cgi-bin/luci/;stok=/locale
+INFO 2024-09-12 21:06:42,230 views The current time in EST being used: 2024-09-12 22:06:42.225813-04:00
+INFO 2024-09-12 21:06:42,230 views The user has made the following pick: None
+INFO 2024-09-12 21:06:43,727 views The current time in EST being used: 2024-09-12 22:06:43.723747-04:00
+INFO 2024-09-12 21:06:43,727 views The user has made the following pick: None
+INFO 2024-09-12 21:06:47,613 views The current time in EST being used: 2024-09-12 22:06:47.610786-04:00
+INFO 2024-09-12 21:06:47,613 views The user has made the following pick: None
+WARNING 2024-09-12 21:16:05,923 log Not Found: /
+INFO 2024-09-12 21:19:52,677 views The current time in EST being used: 2024-09-12 22:19:52.670786-04:00
+INFO 2024-09-12 21:19:52,678 views The user has made the following pick: None
+INFO 2024-09-12 21:20:01,464 views Request JSON: <QueryDict: {'csrfmiddlewaretoken': ['ev9uFGtYwolf2Djpa1zK4OBUi8JSlDU59SyAokzKX8xX2ZDYqfVOMxsKbI3UFOn4'], 'selected_team': ['9']}>
+INFO 2024-09-12 21:20:01,547 views The current time in EST being used: 2024-09-12 22:20:01.542219-04:00
+INFO 2024-09-12 21:20:01,555 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+WARNING 2024-09-12 21:24:34,559 log Not Found: /
+INFO 2024-09-12 21:28:26,529 views The current time in EST being used: 2024-09-12 22:28:26.525003-04:00
+INFO 2024-09-12 21:28:26,535 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:36:42,169 views The current time in EST being used: 2024-09-12 22:36:42.165265-04:00
+INFO 2024-09-12 21:36:42,174 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:36:45,035 views The current time in EST being used: 2024-09-12 22:36:45.031654-04:00
+INFO 2024-09-12 21:36:45,041 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+ERROR 2024-09-12 21:36:45,268 log Internal Server Error: /picks/league/1/
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'else'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/picks/views.py", line 158, in league
+    return render(request, 'picks/league.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 68: 'else', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+INFO 2024-09-12 21:36:46,756 views The current time in EST being used: 2024-09-12 22:36:46.751635-04:00
+INFO 2024-09-12 21:36:46,763 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:36:47,856 views The current time in EST being used: 2024-09-12 22:36:47.851410-04:00
+INFO 2024-09-12 21:36:47,862 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:36:48,469 views The current time in EST being used: 2024-09-12 22:36:48.465786-04:00
+INFO 2024-09-12 21:36:48,474 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+ERROR 2024-09-12 21:36:48,723 log Internal Server Error: /picks/league/1/
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'else'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/picks/views.py", line 158, in league
+    return render(request, 'picks/league.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 68: 'else', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+INFO 2024-09-12 21:36:48,821 views The current time in EST being used: 2024-09-12 22:36:48.818238-04:00
+INFO 2024-09-12 21:36:48,827 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:36:49,667 views The current time in EST being used: 2024-09-12 22:36:49.664793-04:00
+INFO 2024-09-12 21:36:49,672 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:36:50,220 views The current time in EST being used: 2024-09-12 22:36:50.216854-04:00
+INFO 2024-09-12 21:36:50,225 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:36:52,555 views The current time in EST being used: 2024-09-12 22:36:52.551826-04:00
+INFO 2024-09-12 21:36:52,560 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+ERROR 2024-09-12 21:36:52,811 log Internal Server Error: /picks/league/1/
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 510, in parse
+    compile_func = self.tags[command]
+                   ~~~~~~~~~^^^^^^^^^
+KeyError: 'else'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/picks/views.py", line 158, in league
+    return render(request, 'picks/league.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 512, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 563, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 68: 'else', expected 'empty' or 'endfor'. Did you forget to register or load this tag?
+INFO 2024-09-12 21:37:10,867 views The current time in EST being used: 2024-09-12 22:37:10.864548-04:00
+INFO 2024-09-12 21:37:10,872 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:37:11,743 views The current time in EST being used: 2024-09-12 22:37:11.740463-04:00
+INFO 2024-09-12 21:37:11,747 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+WARNING 2024-09-12 21:38:57,733 log Not Found: /
+INFO 2024-09-12 21:40:44,461 views The current time in EST being used: 2024-09-12 22:40:44.458216-04:00
+INFO 2024-09-12 21:40:44,465 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:45,625 views The current time in EST being used: 2024-09-12 22:40:45.622656-04:00
+INFO 2024-09-12 21:40:45,630 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:46,643 views The current time in EST being used: 2024-09-12 22:40:46.639212-04:00
+INFO 2024-09-12 21:40:46,648 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:48,035 views The current time in EST being used: 2024-09-12 22:40:48.029827-04:00
+INFO 2024-09-12 21:40:48,045 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:50,523 views The current time in EST being used: 2024-09-12 22:40:50.519854-04:00
+INFO 2024-09-12 21:40:50,529 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:51,536 views The current time in EST being used: 2024-09-12 22:40:51.531502-04:00
+INFO 2024-09-12 21:40:51,543 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:53,373 views The current time in EST being used: 2024-09-12 22:40:53.368531-04:00
+INFO 2024-09-12 21:40:53,380 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:53,817 views The current time in EST being used: 2024-09-12 22:40:53.814430-04:00
+INFO 2024-09-12 21:40:53,822 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:54,830 views The current time in EST being used: 2024-09-12 22:40:54.827255-04:00
+INFO 2024-09-12 21:40:54,835 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:55,842 views The current time in EST being used: 2024-09-12 22:40:55.839400-04:00
+INFO 2024-09-12 21:40:55,847 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:56,345 views The current time in EST being used: 2024-09-12 22:40:56.342729-04:00
+INFO 2024-09-12 21:40:56,350 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:56,888 views The current time in EST being used: 2024-09-12 22:40:56.885071-04:00
+INFO 2024-09-12 21:40:56,892 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:57,312 views The current time in EST being used: 2024-09-12 22:40:57.308750-04:00
+INFO 2024-09-12 21:40:57,316 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:57,797 views The current time in EST being used: 2024-09-12 22:40:57.794904-04:00
+INFO 2024-09-12 21:40:57,802 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:58,275 views The current time in EST being used: 2024-09-12 22:40:58.272204-04:00
+INFO 2024-09-12 21:40:58,279 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:40:58,926 views The current time in EST being used: 2024-09-12 22:40:58.923500-04:00
+INFO 2024-09-12 21:40:58,931 views The user has made the following pick: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:41:09,978 views The current time in EST being used: 2024-09-12 22:41:09.971781-04:00
+INFO 2024-09-12 21:41:09,984 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:41:11,326 views The current time in EST being used: 2024-09-12 22:41:11.319019-04:00
+INFO 2024-09-12 21:41:11,334 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 21:49:55,095 views The current time in EST being used: 2024-09-12 22:49:55.085687-04:00
+INFO 2024-09-12 21:49:55,101 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+WARNING 2024-09-12 21:56:35,985 log Not Found: /.env
+WARNING 2024-09-12 21:56:36,245 log Not Found: /
+WARNING 2024-09-12 21:59:16,834 log Not Found: /
+INFO 2024-09-12 22:02:26,800 views The current time in EST being used: 2024-09-12 23:02:26.791513-04:00
+INFO 2024-09-12 22:02:26,805 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+ERROR 2024-09-12 22:02:27,057 log Internal Server Error: /picks/league/1/
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/picks/views.py", line 162, in league
+    return render(request, 'picks/league.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'format_pick_correct'
+INFO 2024-09-12 22:02:27,305 views The current time in EST being used: 2024-09-12 23:02:27.296853-04:00
+INFO 2024-09-12 22:02:27,309 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+ERROR 2024-09-12 22:02:27,562 log Internal Server Error: /picks/league/1/
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/picks/views.py", line 162, in league
+    return render(request, 'picks/league.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'format_pick_correct'
+WARNING 2024-09-12 22:03:21,488 log Not Found: /
+INFO 2024-09-12 22:04:57,783 views The current time in EST being used: 2024-09-12 23:04:57.774340-04:00
+INFO 2024-09-12 22:04:57,791 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+ERROR 2024-09-12 22:04:58,147 log Internal Server Error: /picks/league/1/
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/picks/views.py", line 162, in league
+    return render(request, 'picks/league.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'format_pick_correct'
+INFO 2024-09-12 22:04:59,622 views The current time in EST being used: 2024-09-12 23:04:59.613680-04:00
+INFO 2024-09-12 22:04:59,628 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 22:05:00,431 views The current time in EST being used: 2024-09-12 23:05:00.424524-04:00
+INFO 2024-09-12 22:05:00,438 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+ERROR 2024-09-12 22:05:00,730 log Internal Server Error: /picks/league/1/
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/picks/views.py", line 162, in league
+    return render(request, 'picks/league.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'format_pick_correct'
+INFO 2024-09-12 22:05:01,029 views The current time in EST being used: 2024-09-12 23:05:01.019957-04:00
+INFO 2024-09-12 22:05:01,037 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+ERROR 2024-09-12 22:05:01,450 log Internal Server Error: /picks/league/1/
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/picks/views.py", line 162, in league
+    return render(request, 'picks/league.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 962, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'format_pick_correct'
+INFO 2024-09-12 22:05:01,750 views The current time in EST being used: 2024-09-12 23:05:01.735461-04:00
+INFO 2024-09-12 22:05:01,774 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 22:05:07,512 views The current time in EST being used: 2024-09-12 23:05:07.498842-04:00
+INFO 2024-09-12 22:05:07,520 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 22:05:08,700 views The current time in EST being used: 2024-09-12 23:05:08.691423-04:00
+INFO 2024-09-12 22:05:08,706 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 22:07:23,731 views The current time in EST being used: 2024-09-12 23:07:23.723161-04:00
+INFO 2024-09-12 22:07:23,736 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 22:07:25,756 views The current time in EST being used: 2024-09-12 23:07:25.746545-04:00
+INFO 2024-09-12 22:07:25,762 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+ERROR 2024-09-12 22:07:26,068 log Internal Server Error: /picks/league/1/
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/picks/views.py", line 162, in league
+    return render(request, 'picks/league.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 489, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 487, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 605, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 701, in __init__
+    filter_func = parser.find_filter(filter_name)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 611, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'get_pick_for_week'
+INFO 2024-09-12 22:08:30,514 views The current time in EST being used: 2024-09-12 23:08:30.504825-04:00
+INFO 2024-09-12 22:08:30,521 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+ERROR 2024-09-12 22:08:30,867 log Internal Server Error: /picks/league/1/
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/picks/views.py", line 162, in league
+    return render(request, 'picks/league.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Empty variable tag on line 137
+INFO 2024-09-12 22:08:32,272 views The current time in EST being used: 2024-09-12 23:08:32.263825-04:00
+INFO 2024-09-12 22:08:32,283 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 22:08:39,153 views The current time in EST being used: 2024-09-12 23:08:39.145775-04:00
+INFO 2024-09-12 22:08:39,157 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+ERROR 2024-09-12 22:08:39,425 log Internal Server Error: /picks/league/1/
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/picks/views.py", line 162, in league
+    return render(request, 'picks/league.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Empty variable tag on line 137
+INFO 2024-09-12 22:08:40,576 views The current time in EST being used: 2024-09-12 23:08:40.568687-04:00
+INFO 2024-09-12 22:08:40,581 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+ERROR 2024-09-12 22:08:40,841 log Internal Server Error: /picks/league/1/
+Traceback (most recent call last):
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/contrib/auth/decorators.py", line 60, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/picks/views.py", line 162, in league
+    return render(request, 'picks/league.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/backends/django.py", line 79, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 196, in compile_nodelist
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 518, in parse
+    raise self.error(token, e)
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 516, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/defaulttags.py", line 862, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "/root/eliminator/myprojectenv/lib/python3.12/site-packages/django/template/base.py", line 483, in parse
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Empty variable tag on line 137
+INFO 2024-09-12 22:09:09,095 views The current time in EST being used: 2024-09-12 23:09:09.089129-04:00
+INFO 2024-09-12 22:09:09,099 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 22:09:41,160 views The current time in EST being used: 2024-09-12 23:09:41.146881-04:00
+INFO 2024-09-12 22:09:41,169 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 22:09:41,966 views The current time in EST being used: 2024-09-12 23:09:41.958253-04:00
+INFO 2024-09-12 22:09:41,972 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 22:10:38,084 views The current time in EST being used: 2024-09-12 23:10:38.076318-04:00
+INFO 2024-09-12 22:10:38,090 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 22:10:41,286 views The current time in EST being used: 2024-09-12 23:10:41.279877-04:00
+INFO 2024-09-12 22:10:41,291 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 22:10:45,074 views The current time in EST being used: 2024-09-12 23:10:45.062913-04:00
+INFO 2024-09-12 22:10:45,080 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys
+INFO 2024-09-12 22:11:17,884 views The current time in EST being used: 2024-09-12 23:11:17.872888-04:00
+INFO 2024-09-12 22:11:17,892 views The user has already made the following pick this week: rizzo - NYYDummyLeague (2024) - 2 - Dallas Cowboys

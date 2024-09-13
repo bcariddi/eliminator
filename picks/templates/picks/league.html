@@ -60,12 +60,21 @@
 {% block content %}
 <h1>{{ league.name }}</h1>
 
+<!-- Section for showing teams you have already picked -->
+{% if player_past_picks %}
+    <h3>You have already picked:</h3>
+    {% for pick in player_past_picks %}
+        <li>Week {{ pick.week }}: {{ pick.team_picked }} {{ pick.correct|format_pick_correct }}</li>
+    {% endfor %}
+{% else %}
+{% endif %}
+
 <!-- Section for making a pick from the current week's matchups -->
 <section>
     {% if current_pick %}
-        <h2>Make your pick for week {{ current_week }} (Currently selected: {{ current_pick.team_picked }})</h2>
+        <h2>Make your pick for Week {{ current_week }} (Currently selected: {{ current_pick.team_picked }})</h2>
     {% else %}
-        <h2>Make your pick for week {{ current_week }}</h2>
+        <h2>Make your pick for Week {{ current_week }}</h2>
     {% endif %}
     <form method="post" action="{% url 'make_pick' league.id current_week %}">
         {% csrf_token %}
@@ -80,9 +89,17 @@
                         <span class="spread">{{ matchup.home_spread|format_spread }}</span>
                         <span class="gametime">{{ matchup.date|date:"m/d" }} {{ matchup.time }}</span>
                     {% else %}
-                        <button type="button" class="team-button" data-team="{{ matchup.away_team.id }}">{{ matchup.away_team }}</button>
+		        {% if matchup.away_team not in player_past_picks_team_list %}
+                            <button type="button" class="team-button" data-team="{{ matchup.away_team.id }}">{{ matchup.away_team }}</button>
+			{% else %}
+                            <button type="button" class="team-button disabled" disabled>{{ matchup.away_team }}</button>
+			{% endif %}
                         <span class="at-symbol">@</span>
-                        <button type="button" class="team-button" data-team="{{ matchup.home_team.id }}">{{ matchup.home_team }}</button>
+			{% if matchup.home_team not in player_past_picks_team_list %}
+                            <button type="button" class="team-button" data-team="{{ matchup.home_team.id }}">{{ matchup.home_team }}</button>
+			{% else %}    
+			    <button type="button" class="team-button disabled" disabled>{{ matchup.away_team }}</button>
+			{% endif %}
                         <span class="spread">{{ matchup.home_spread|format_spread }}</span>
                         <span class="gametime">{{ matchup.date|date:"m/d" }} {{ matchup.time }}</span>
                     {% endif %}
@@ -103,7 +120,6 @@
     </ul>
 </section>
 
-<!--
 <section>
     <h2>League Results</h2>
     <table>
@@ -111,24 +127,23 @@
             <tr>
                 <th>Player</th>
                 {% for week in weeks %}
-                    <th>Week {{ week }}</th>
+                    <th>{{ week }}</th>
                 {% endfor %}
             </tr>
         </thead>
-        <tbody>
+	<tbody>
             {% for player in league_players %}
                 <tr>
-                    <td>{{ player.user.username }}</td>
+                        <td></td>
                     {% for week in weeks %}
-                        <td>{{ player.picks|get_pick_for_week:week }}</td>
+		        <td></td>
                     {% endfor %}
                 </tr>
             {% endfor %}
-        </tbody>
+	</tbody>
     </table>
 </section>
 {% endblock %}
--->
 
 {% block js %}
 <script>
