@@ -129,7 +129,7 @@ def league(request, league_id):
     player_past_picks_team_list = [
         pick.team_picked for pick in player_past_picks]
 
-    # Need data formatted like this:
+    # Data formatted like this:
     '''
     league_results = {
         'Player1': ['City1 Team1', 'City2 Team2', ...],
@@ -141,13 +141,13 @@ def league(request, league_id):
     league_results = defaultdict(list)
     for player in league_players:
         player_picks = Pick.objects.filter(
-            leagueplayer__player=player, leagueplayer__league=league).order_by('week')
+            leagueplayer__player=player.player, leagueplayer__league=league).order_by('week')
 
         picks_list = [None] * current_week
         for pick in player_picks:
-            picks_list[pick.week - 1] = (pick.team_picked, pick.correct)
+            picks_list[pick.week - 1] = (pick.team_picked.abbreviation, pick.correct)
 
-        league_results[player.player.username] = picks_list
+        league_results[player.player] = picks_list
 
     league_results = dict(league_results)
 
@@ -158,8 +158,6 @@ def league(request, league_id):
 
     context = {
         'league': league,
-        'players': players,
-        'league_players': league_players,
         'current_week': current_week,
         'weeks': [x for x in range(1, 19)],
         'current_week_matchups': current_week_matchups,

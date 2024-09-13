@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load custom_filters %}
 
-{% block title %}League{% endblock %}
+{% block title %}{{ league.name }}{% endblock %}
 
 {% block css %}
 <style>
@@ -53,6 +53,12 @@
     .submit-pick-button:disabled {
         background-color: #cccccc; /* Change background color when disabled */
         cursor: not-allowed; /* Change cursor when disabled */
+    }
+    .correct-pick {
+	color: green;
+    }
+    .incorrect-pick {
+	color: red;
     }
 </style>
 {% endblock %}
@@ -110,16 +116,6 @@
     </form>
 </section>
 
-<!-- Section for displaying league members -->
-<section>
-    <h2>League Members</h2>
-    <ul>
-        {% for player in league_players %}
-            <li>{{ player.player.name }}</li>
-        {% endfor %}
-    </ul>
-</section>
-
 <section>
     <h2>League Results</h2>
     <table>
@@ -136,7 +132,11 @@
                 <tr>
                     <td>{{ player }}</td>
                     {% for pick in picks %}
-		                <td>{{ pick|format_pick }}</td>
+		        {% if pick.1 == True %}
+		            <td class="correct-pick">{{ pick.0 }}</td>
+			{% elif pick.1 == False %}
+			    <td class="incorrect-pick">{{ pick.0 }}</td>
+			{% endif %}
                     {% endfor %}
                 </tr>
             {% endfor %}
