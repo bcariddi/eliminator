@@ -3,7 +3,7 @@ html, body {
     padding: 0;
 }
 body {
-    font-family: 'SF Pro Text';
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 .messages-container {
     margin: 20px;
