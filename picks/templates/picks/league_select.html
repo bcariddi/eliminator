@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}Join or Create a League{% endblock %}
+
+{% block css %}
+<style>
+    .league-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .league-name {
+        margin-right: 20px; /* Adjust this value as needed */
+    }
+    .join-button {
+        display: flex;
+        align-items: center;
+    }
+    .join-button label {
+        margin-right: 10px;
+    }
+    .join-button input {
+        margin-right: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+    <h1>Join or create a league</h1>
+    {% if leagues %}
+        <ul>
+            {% for league in leagues %}
+                <li class="league-item">
+                    <span class="league-name">{{ league.name }}</span>
+                    {% if league.id in user_league_ids %}
+                        <form method="post" action="{% url 'league_select' %}" class="join-button">
+                            {% csrf_token %}
+                            <input type="hidden" name="league_id" value="{{ league.id }}">
+                            <button type="submit">Leave League</button>
+                        </form>
+                    {% else %}
+                        <form method="post" action="{% url 'league_select' %}" class="join-button">
+                            {% csrf_token %}
+                            <input type="hidden" name="league_id" value="{{ league.id }}">
+                            <label for="password-{{ league.id }}">Password:</label>
+                            <input type="password" id="password-{{ league.id }}" name="password" required>
+                            <button type="submit">Join League</button>
+                        </form>
+                    {% endif %}
+                </li>
+            {% endfor %}
+        </ul>
+        <p>Create a new league <a href="{% url 'league_create' %}">here</a>.</p>
+    {% else %}
+        <p>No leagues available. Create one <a href="{% url 'league_create' %}">here</a>.</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Eliminator{% endblock %}</title>
+    <!-- Add your CSS and other head elements here -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="{% url 'index' %}">Home</a>
+            </div>
+            <div class="nav-right">
+                {% if user.is_authenticated %}
+                    <a href="{% url 'profile' %}">Profile</a>
+                    <form method="post" action="{% url 'logout' %}" style="display: inline;">
+                        {% csrf_token %}
+                        <button type="submit" class="logout-button">Logout</button>
+                    </form>
+                {% else %}
+                    <a href="{% url 'signup' %}">Sign Up</a>
+                    <a href="{% url 'login' %}">Login</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <div class="messages-container">
+        {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                    <li class="{{ message.tags }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div> 
+
+    <div class="content-container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Add your footer and other elements here -->
+    {% block js %}{% endblock %}
+</body>
+</html>

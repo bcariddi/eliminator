@@ -1,0 +1,75 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'SF Pro Text';
+}
+.messages-container {
+    margin: 20px;
+    height: 30px;
+}
+.messages {
+    list-style-type: none;
+    padding: 0;
+}
+.messages li {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+.messages .success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.messages .error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+.messages .warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+.messages .info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+header {
+    background-color: #23476c;
+    color: #fff;
+    padding: 20px 20px;
+    border-radius: 0 0 5px 5px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-left a, .nav-right a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.nav-left a:hover, .nav-right a:hover {
+    text-decoration: underline;
+}
+.content-container {
+    margin: 20px; /* Adjust the margin as needed */
+    margin-top: 30px;
+    padding: 20px; /* Adjust the padding as needed */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+.logout-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+    text-decoration: none;
+}
+.logout-button:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% load custom_filters %}
+
+{% block title %}League{% endblock %}
+
+{% block css %}
+<style>
+    .team-button {
+        background: none;
+        border: none;
+        color: blue;
+        cursor: pointer;
+        text-decoration: underline;
+        padding: 0;
+    }
+    .team-button.selected {
+        background-color: #d4edda;
+    }
+    .team-button.disabled {
+        color: gray;
+        cursor: not-allowed;
+        text-decoration: none;
+    }
+    .past {
+        color: gray;
+    }
+    .matchups {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        gap: 10px;
+    }
+    .matchup {
+        display: contents;
+    }
+    .at-symbol, .spread, .start-time {
+        align-self: center;
+    }
+    .submit-pick-button {
+        margin-top: 20px; /* Move the button down */
+        background-color: #007bff; /* Change background color to blue */
+        color: white; /* Change text color to white */
+        padding: 10px 20px; /* Add padding for a larger clickable area */
+        border: none; /* Remove default border */
+        border-radius: 5px; /* Add rounded corners */
+        font-size: 16px; /* Increase font size */
+        cursor: pointer; /* Change cursor to pointer */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        transition: background-color 0.3s ease; /* Add transition for hover effect */
+    }
+    .submit-pick-button:hover {
+        background-color: #0056b3; /* Darken background color on hover */
+    }
+    .submit-pick-button:disabled {
+        background-color: #cccccc; /* Change background color when disabled */
+        cursor: not-allowed; /* Change cursor when disabled */
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>{{ league.name }}</h1>
+
+<!-- Section for making a pick from the current week's matchups -->
+<section>
+    {% if current_pick %}
+        <h2>Make your pick for week {{ current_week }} (Currently selected: {{ current_pick.team_picked }})</h2>
+    {% else %}
+        <h2>Make your pick for week {{ current_week }}</h2>
+    {% endif %}
+    <form method="post" action="{% url 'make_pick' league.id current_week %}">
+        {% csrf_token %}
+        <input type="hidden" id="selected_team" name="selected_team" value="">
+        <div class="matchups">
+            {% for matchup in current_week_matchups %}
+                <div class="matchup">
+                    {% if matchup.date < current_date_eastern %}
+                        <button type="button" class="team-button disabled" disabled>{{ matchup.away_team }}</button>
+                        <span class="at-symbol">@</span>
+                        <button type="button" class="team-button disabled" disabled>{{ matchup.home_team }}</button>
+                        <span class="spread">{{ matchup.home_spread|format_spread }}</span>
+                        <span class="gametime">{{ matchup.date|date:"m/d" }} {{ matchup.time }}</span>
+                    {% else %}
+                        <button type="button" class="team-button" data-team="{{ matchup.away_team.id }}">{{ matchup.away_team }}</button>
+                        <span class="at-symbol">@</span>
+                        <button type="button" class="team-button" data-team="{{ matchup.home_team.id }}">{{ matchup.home_team }}</button>
+                        <span class="spread">{{ matchup.home_spread|format_spread }}</span>
+                        <span class="gametime">{{ matchup.date|date:"m/d" }} {{ matchup.time }}</span>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <button type="submit" class="submit-pick-button" disabled>Submit Pick</button>
+    </form>
+</section>
+
+<!-- Section for displaying league members -->
+<section>
+    <h2>League Members</h2>
+    <ul>
+        {% for player in league_players %}
+            <li>{{ player.player.name }}</li>
+        {% endfor %}
+    </ul>
+</section>
+
+<!--
+<section>
+    <h2>League Results</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                {% for week in weeks %}
+                    <th>Week {{ week }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for player in league_players %}
+                <tr>
+                    <td>{{ player.user.username }}</td>
+                    {% for week in weeks %}
+                        <td>{{ player.picks|get_pick_for_week:week }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endblock %}
+-->
+
+{% block js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const teamButtons = document.querySelectorAll('.team-button:not(.disabled)');
+        const selectedTeamInput = document.getElementById('selected_team');
+        const submitPickButton = document.querySelector('.submit-pick-button');
+
+        console.log('Team buttons:', teamButtons);
+        console.log('Selected team input:', selectedTeamInput);
+        console.log('Submit pick button:', submitPickButton);
+
+        teamButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const selectedTeam = this.getAttribute('data-team');
+                selectedTeamInput.value = selectedTeam;
+                console.log('Selected team:', selectedTeam);
+
+                teamButtons.forEach(btn => btn.classList.remove('selected'));
+                this.classList.add('selected');
+
+                // Enable the submit button when a team is selected
+                submitPickButton.disabled = false;
+            });
+        });
+
+        // Disable the submit button if no team is selected
+        if (!selectedTeamInput.value) {
+            submitPickButton.disabled = true;
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Eliminator!</h1>
+    {% if user.is_authenticated %}
+        <p>Hello, {{ user.username }}! It's week {{ current_week }}.</p>
+        <!-- If user is in one or more leagues, they should be displayed here -->
+        {% if user_leagues %}
+            <h2>Your Leagues</h2>
+            <ul>
+                {% for league in user_leagues %}
+                    <li>
+                        <a href="{% url 'league' league.id %}">
+                        {{ league.name }}
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>You are not in any leagues.</p>
+        {% endif %}
+        <p><a href="{% url 'league_select' %}">Join or create a league</a></p>
+    {% else %}
+        <p>Please <a href="{% url 'login' %}">log in</a> to continue.</p>
+        <p>If you don't have an account, <a href="{% url 'signup' %}">sign up here</a>.</p>
+    {% endif %}
+
+    <section id="rules">
+        <h2>Rules</h2>
+        <p>Eliminator is a game where you pick a different team each week to win their game. If your team wins, you move onto the next week. If your team loses, you receive a strike. Three strikes and you are eliminated.</p>
+        <li>Once you pick a team, you cannot pick that team again for the rest of the season.</li>
+        <li>You may pick a team as long as their game has not started yet.</li>
+        <li>If you do not make a pick for a week, you will receive a strike.</li>
+        <li>If a game ends in a tie, both teams are considered losers.</li>
+        <p>The last player standing wins!</p>
+        <li>If multiple players make it to the end of the season without receiving three strikes, the winner is determined by who has the fewest strikes.</li> 
+        <li>If that does not break the tie, the winner is determined by who maintained zero strikes the longest.</li>
+        <li>If that does not break the tie, the winner is determined by who has the higest point differential.</li>
+    </section>
+{% endblock %}
