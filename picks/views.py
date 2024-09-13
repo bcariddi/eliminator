@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 import logging
-
+from collections import defaultdict
 from datetime import datetime
 from pytz import timezone
 
@@ -50,22 +50,6 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
-
-
-''' Not sure if I need this
-def signin(request):
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        user = authenticate(username=username, password=password)
-
-        if user:
-            login(request, user)
-            return redirect('index')
-        else:
-            messages.error(request, 'Invalid username or password.')
-    return render(request, 'registration/signin.html')
-'''
 
 
 @login_required
@@ -140,8 +124,10 @@ def league(request, league_id):
     current_date_eastern = current_time_eastern.date()
     current_pick = Pick.objects.filter(
         leagueplayer__player=request.user.player, leagueplayer__league=league, week=current_week).first()
-    player_past_picks = Pick.objects.filter(leagueplayer__player=request.user.player, leagueplayer__league=league).exclude(week=current_week)
-    player_past_picks_team_list = [pick.team_picked for pick in player_past_picks]
+    player_past_picks = Pick.objects.filter(
+        leagueplayer__player=request.user.player, leagueplayer__league=league).exclude(week=current_week)
+    player_past_picks_team_list = [
+        pick.team_picked for pick in player_past_picks]
 
     # Need data formatted like this:
     '''
@@ -152,22 +138,37 @@ def league(request, league_id):
     }
     '''
 
+    league_results = defaultdict(list)
+    for player in league_players:
+        player_picks = Pick.objects.filter(
+            leagueplayer__player=player, leagueplayer__league=league).order_by('week')
+
+        picks_list = [None] * current_week
+        for pick in player_picks:
+            picks_list[pick.week - 1] = pick.team_picked
+
+        league_results[player.player.username] = picks_list
+
+    league_results = dict(league_results)
+
     logger.info(f'The current time in EST being used: {current_time_eastern}')
 
-    logger.info(f'The user has already made the following pick this week: {current_pick}')
+    logger.info(f'The user has already made the following pick this week: {
+                current_pick}')
 
     context = {
         'league': league,
         'players': players,
         'league_players': league_players,
         'current_week': current_week,
-        'weeks': [x for x in range(1,19)],
+        'weeks': [x for x in range(1, 19)],
         'current_week_matchups': current_week_matchups,
         'current_time_eastern': current_time_eastern,
         'current_date_eastern': current_date_eastern,
         'current_pick': current_pick,
         'player_past_picks': player_past_picks,
         'player_past_picks_team_list': player_past_picks_team_list,
+        'league_results': league_results,
     }
     return render(request, 'picks/league.html', context)
 
