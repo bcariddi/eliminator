@@ -112,7 +112,7 @@
 			{% if matchup.home_team not in player_past_picks_team_list %}
                             <button type="button" class="team-button" data-team="{{ matchup.home_team.id }}">{{ matchup.home_team }}</button>
 			{% else %}    
-			    <button type="button" class="team-button disabled" disabled>{{ matchup.away_team }}</button>
+			    <button type="button" class="team-button disabled" disabled>{{ matchup.home_team }}</button>
 			{% endif %}
                         <span class="spread">{{ matchup.home_spread|format_spread }}</span>
                         <span class="gametime">{{ matchup.date|date:"m/d" }} {{ matchup.time }}</span>

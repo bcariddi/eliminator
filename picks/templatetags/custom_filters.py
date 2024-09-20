@@ -28,8 +28,10 @@ def format_pick_correct(value):
         value = bool(value)
         if value == True:
             return "✅"
-        else:
+        elif value == False:
             return "❌"
+        else:
+            return "👀"
     except (ValueError, TypeError):
         return value
 
