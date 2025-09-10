@@ -1,0 +1,15 @@
+week,away_team,home_team,date,time,home_spread,away_score,home_score,tie
+5,TB,ATL,2024-10-03,8:15PM,-2.5,30,36,false
+5,NYJ,MIN,2024-10-06,9:30AM,-2.5,17,23,false
+5,CAR,CHI,2024-10-06,1:00PM,-4,10,36,false
+5,BAL,CIN,2024-10-06,1:00PM,2.5,41,38,false
+5,MIA,NE,2024-10-06,1:00PM,-1,15,10,false
+5,CLE,WAS,2024-10-06,1:00PM,-3,13,34,false
+5,IND,JAX,2024-10-06,1:00PM,-3,34,37,false
+5,BUF,HOU,2024-10-06,1:00PM,1,20,23,false
+5,LV,DEN,2024-10-06,4:05PM,-2.5,18,34,false
+5,ARI,SF,2024-10-06,4:05PM,-7.5,24,23,false
+5,GB,LAR,2024-10-06,4:25PM,3,24,19,false
+5,NYG,SEA,2024-10-06,4:25PM,-6.5,29,20,false
+5,DAL,PIT,2024-10-06,8:20PM,-2.5,20,17,false
+5,NO,KC,2024-10-07,8:15PM,-5.5,13,26,false

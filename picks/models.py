@@ -71,6 +71,10 @@ class Pick(models.Model):
         return f'{self.leagueplayer} - {self.week} - {self.team_picked}'
 
     def clean(self):
+        # Do no validations if there is no team selected
+        if self.team_picked == Team.objects.get(name='NO PICK'):
+            return
+
         # Validate that the league player has not already picked this team for a previous week
         if Pick.objects.filter(
             leagueplayer=self.leagueplayer,

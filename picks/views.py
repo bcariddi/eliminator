@@ -119,13 +119,13 @@ def league(request, league_id):
     league_players = LeaguePlayer.objects.filter(league=league)
     players = [lp.player for lp in league_players]
     current_week = get_current_week()
-    current_week_matchups = Matchup.objects.filter(week=current_week)
+    current_week_matchups = Matchup.objects.filter(week=current_week).order_by('date', 'time')
     current_time_eastern = datetime.now(timezone('US/Eastern'))
     current_date_eastern = current_time_eastern.date()
     current_pick = Pick.objects.filter(
         leagueplayer__player=request.user.player, leagueplayer__league=league, week=current_week).first()
     player_past_picks = Pick.objects.filter(
-        leagueplayer__player=request.user.player, leagueplayer__league=league).exclude(week=current_week)
+        leagueplayer__player=request.user.player, leagueplayer__league=league).exclude(week=current_week).order_by('week')
     player_past_picks_team_list = [
         pick.team_picked for pick in player_past_picks]
 
