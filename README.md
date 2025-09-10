@@ -1,2 +1,2 @@
-# README
-Pushing and deploying directly to main :)
+# Eliminator
+NFL eliminator style game (2024, 2025 seasons).
