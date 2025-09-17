@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Create Account - NFL Eliminator 2025{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="text-center">🏈 Create Your Account</h4>
+            </div>
+            <div class="card-body">
+                <p class="text-center text-muted mb-4">
+                    Phone number verified: <strong>{{ phone }}</strong><br>
+                    Now tell us your name to complete setup
+                </p>
+                
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Your Name</label>
+                        <input type="text" 
+                               class="form-control" 
+                               id="name" 
+                               name="name" 
+                               placeholder="Enter your full name"
+                               required>
+                        <div class="form-text">This is how you'll appear in leagues</div>
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">
+                            Create Account
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="text-center mt-3">
+                    <small class="text-muted">
+                        By creating an account, you agree to participate in good faith
+                        and follow league rules.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block scripts %}
+<script>
+// Focus on name input
+document.getElementById('name').focus();
+</script>
+{% endblock %}
+{% endblock %}

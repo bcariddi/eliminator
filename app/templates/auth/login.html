@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Login - NFL Eliminator 2025{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="text-center">📱 Sign In</h4>
+            </div>
+            <div class="card-body">
+                <p class="text-center text-muted mb-4">
+                    Enter your phone number and we'll send you a verification code
+                </p>
+                
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" 
+                               class="form-control" 
+                               id="phone" 
+                               name="phone" 
+                               placeholder="(555) 123-4567"
+                               required>
+                        <div class="form-text">US phone numbers only</div>
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">
+                            Send Verification Code
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="text-center mt-3">
+                    <small class="text-muted">
+                        By continuing, you agree to receive SMS messages from Eliminator.
+                        Standard message rates may apply.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

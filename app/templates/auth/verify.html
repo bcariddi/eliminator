@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Verify Code - NFL Eliminator 2025{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="text-center">📱 Enter Verification Code</h4>
+            </div>
+            <div class="card-body">
+                <p class="text-center text-muted mb-4">
+                    We sent a 6-digit code to <strong>{{ phone }}</strong>
+                </p>
+                
+                <form method="POST">
+                    <div class="mb-3">
+                        <label for="code" class="form-label">Verification Code</label>
+                        <input type="text" 
+                               class="form-control text-center" 
+                               id="code" 
+                               name="code" 
+                               placeholder="123456"
+                               maxlength="6"
+                               style="font-size: 1.5rem; letter-spacing: 0.5rem;"
+                               required>
+                        <div class="form-text">Enter the 6-digit code from your text message</div>
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">
+                            Verify Code
+                        </button>
+                    </div>
+                </form>
+                
+                <div class="text-center mt-3">
+                    <a href="{{ url_for('auth.login') }}" class="btn btn-link">
+                        ← Use Different Phone Number
+                    </a>
+                </div>
+                
+                <div class="text-center mt-2">
+                    <small class="text-muted">
+                        Didn't receive a code? Check your messages or try again.
+                        Codes expire after 10 minutes.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block scripts %}
+<script>
+// Auto-focus on code input and format nicely
+document.getElementById('code').addEventListener('input', function(e) {
+    // Remove any non-digits
+    this.value = this.value.replace(/\D/g, '');
+    
+    // Auto-submit when 6 digits entered
+    if (this.value.length === 6) {
+        this.form.submit();
+    }
+});
+
+// Focus on load
+document.getElementById('code').focus();
+</script>
+{% endblock %}
+{% endblock %}
